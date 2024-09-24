@@ -22,18 +22,18 @@ public class AccountController {
         return accountService.getAccounts();
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("/{accountId}")
     Account getAccount(@PathVariable("userId") String userId){
         return accountService.getAccount(userId);
     }
 
-    @PutMapping("/{userId}")
+    @PutMapping("/{accountId}")
     Account updateAccount(@PathVariable String userId, @RequestBody AccountUpdate request){
         return accountService.updateAccount(userId, request);
 
     }
 
-    @DeleteMapping("/{userId}")
+    @DeleteMapping("/{accountId}")
     String deleteAccount(@PathVariable String userId){
         accountService.deleteAccount(userId);
         return "Account has been deleted";

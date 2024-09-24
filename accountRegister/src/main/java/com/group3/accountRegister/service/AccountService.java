@@ -16,7 +16,7 @@ public class AccountService {
     public Account createAccount(AccountCreation request){
         Account account = new Account();
 
-        account.setUserId(IdGenerator.generateCustomUserId());
+        account.setAccountId(IdGenerator.generateCustomUserId());
         account.setRoleId(request.getRoleId());
         account.setPassword(request.getPassword());
         account.setUserName(request.getUserName());

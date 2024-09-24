@@ -1,8 +1,6 @@
 package com.group3.accountRegister.entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
@@ -10,7 +8,7 @@ public class Account {
 
     @Id
 
-    private String userId;
+    private String accountId;
     private String roleId;
     private String password;
     private String userName;
@@ -18,12 +16,12 @@ public class Account {
     private String email;
     private String status;
 
-    public String getUserId() {
-        return userId;
+    public String getAccountId() {
+        return accountId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
     }
 
     public String getRoleId() {
