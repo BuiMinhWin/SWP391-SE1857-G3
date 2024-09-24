@@ -3,6 +3,8 @@ package com.group3.accountRegister.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
+import java.util.Date;
+
 @Entity
 public class Account {
 
@@ -14,7 +16,34 @@ public class Account {
     private String userName;
     private String phone;
     private String email;
-    private String status;
+    private String avatar;
+    private String firstName;
+    private String lastName;
+    private Date createAt;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Date getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(Date createAt) {
+        this.createAt = createAt;
+    }
 
     public String getAccountId() {
         return accountId;
@@ -64,11 +93,11 @@ public class Account {
         this.email = email;
     }
 
-    public String getStatus() {
-        return status;
+    public String getAvatar() {
+        return avatar;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 }

@@ -22,7 +22,10 @@ public class AccountService {
         account.setUserName(request.getUserName());
         account.setPhone(request.getPhone());
         account.setEmail(request.getEmail());
-        account.setStatus(request.getStatus());
+        account.setAvatar(request.getAvatar());
+        account.setFirstName(request.getFirstName());
+        account.setLastName(request.getLastName());
+        account.setCreateAt(request.getCreateAt());
 
         return accountRepository.save(account);
     }
@@ -34,6 +37,9 @@ public class AccountService {
         account.setUserName(request.getUserName());
         account.setPhone(request.getPhone());
         account.setEmail(request.getEmail());
+        account.setAvatar(request.getAvatar());
+        account.setFirstName(request.getFirstName());
+        account.setLastName(request.getLastName());
 
         return accountRepository.save(account);
     }

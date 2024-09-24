@@ -1,12 +1,49 @@
 package com.group3.accountRegister.dto.request;
 
+import java.util.Date;
+
 public class AccountCreation {
     private String roleId;
     private String password;
     private String userName;
     private String phone;
     private String email;
-    private String status;
+    private String avatar;
+    private String firstName;
+    private String lastName;
+    private Date createAt;
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public Date getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(Date createAt) {
+        this.createAt = createAt;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
     public String getRoleId() {
         return roleId;
@@ -48,11 +85,4 @@ public class AccountCreation {
         this.email = email;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
 }
