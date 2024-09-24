@@ -48,12 +48,12 @@ public class AccountService {
         return accountRepository.findAll();
     }
 
-    public Account getAccount(String userId){
-        return accountRepository.findById(userId).orElseThrow(() -> new RuntimeException("Account not found"));
+    public Account getAccount(String accountId){
+        return accountRepository.findById(accountId).orElseThrow(() -> new RuntimeException("Account not found"));
 
     }
 
-    public void deleteAccount(String userId){
-        accountRepository.deleteById(userId);
+    public void deleteAccount(String accountId){
+        accountRepository.deleteById(accountId);
     }
 }
