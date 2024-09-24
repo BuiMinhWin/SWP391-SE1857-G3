@@ -16,8 +16,8 @@ class App extends Component {
         <ClassClick />
         <FunctionClick />
 
-        {/* <Count /> */}
-        {/* <Message /> */}
+        <Count />
+        <Message />
 
         {/* <Greet name="Quan" classRoom="SE1857">
           <p>This is children prop</p>
