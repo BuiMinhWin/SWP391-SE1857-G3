@@ -10,6 +10,7 @@ import net.javaguildes.ems.service.EmployeeService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -62,9 +63,13 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public EmployeeDTO getEmployeeByUserName(String userName) {
-        Employee employee= employeeRepository.findByUserName(userName)
-                .orElseThrow(()->   new ResourceNotFoundException("Employee is not exists with given id" + userName));
-        return EmployeeMapper.maptoEmployeeDTO(employee);
+        Optional<Employee> employeeOptional = employeeRepository.findByUserName(userName);
+
+        if (employeeOptional.isPresent()) {
+            return EmployeeMapper.maptoEmployeeDTO(employeeOptional.get());
+        }
+
+        return null;
     }
 
 

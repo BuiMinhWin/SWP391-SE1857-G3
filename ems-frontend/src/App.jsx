@@ -8,30 +8,29 @@ import EmployeeComponent from './components/EmployeeComponent';
 import LoginComponent from './components/LoginComponent';
 
 function App() {
-  // Tạo trạng thái để lưu trữ thông tin đăng nhập
+  
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // Giả sử bạn có một hàm để kiểm tra đăng nhập, đây là cách đơn giản:
   const handleLogin = (status) => {
     setIsAuthenticated(status);
   };
 
   return (
-    <>
+    <div id="app-container">
       <BrowserRouter>
         <HeaderComponent />
-        <Routes>
-         
-          <Route path='/login' element={<LoginComponent handleLogin={handleLogin} />} />
-          
-          <Route path='/' element={isAuthenticated ? <ListEmployeeComponent /> : <Navigate to='/login' />} />
-          <Route path='/employees' element={isAuthenticated ? <ListEmployeeComponent /> : <Navigate to='/login' />} />
-          <Route path='/add-employee' element={isAuthenticated ? <EmployeeComponent /> : <Navigate to='/login' />} />
-          <Route path='/edit-employee/:id' element={isAuthenticated ? <EmployeeComponent /> : <Navigate to='/login' />} />
-        </Routes>
+        <div className="main-content">
+          <Routes>
+            <Route path='/login' element={<LoginComponent handleLogin={handleLogin} />} />
+            <Route path='/' element={isAuthenticated ? <ListEmployeeComponent /> : <Navigate to='/login' />} />
+            <Route path='/employees' element={isAuthenticated ? <ListEmployeeComponent /> : <Navigate to='/login' />} />
+            <Route path='/add-employee' element={isAuthenticated ? <EmployeeComponent /> : <Navigate to='/login' />} />
+            <Route path='/edit-employee/:id' element={isAuthenticated ? <EmployeeComponent /> : <Navigate to='/login' />} />
+          </Routes>
+        </div>
         <FooterComponent />
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

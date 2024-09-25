@@ -2,6 +2,7 @@ package net.javaguildes.ems.controller;
 
 import lombok.AllArgsConstructor;
 import net.javaguildes.ems.dto.EmployeeDTO;
+import net.javaguildes.ems.entity.LoginRequest;
 import net.javaguildes.ems.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,12 +19,16 @@ public class EmployeeController {
     private EmployeeService employeeService;
 
     //Build Login REST APi
-    @GetMapping("{username}")
-    public ResponseEntity<String> loginAccount(@PathVariable("username") String userName) {
-        EmployeeDTO employeeDTO = employeeService.getEmployeeByUserName(userName);
+    @PostMapping("/login")
+    public ResponseEntity<String> loginAccount(@RequestBody LoginRequest loginRequest) {
+        EmployeeDTO employeeDTO = employeeService.getEmployeeByUserName(loginRequest.getUsername());
 
         if (employeeDTO == null) {
             return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
+        }
+
+        if (!employeeDTO.getPassword().equals(loginRequest.getPassword())) {
+            return new ResponseEntity<>("Incorrect password", HttpStatus.UNAUTHORIZED);
         }
 
         return new ResponseEntity<>("Login successful", HttpStatus.OK);
@@ -32,7 +37,6 @@ public class EmployeeController {
 
     //Build Add Employee REST API
     @PostMapping
-
     public ResponseEntity<EmployeeDTO> createEmployee(@RequestBody EmployeeDTO employeeDTO){
         EmployeeDTO savedEmployee = employeeService.createEmployee(employeeDTO);
         return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);

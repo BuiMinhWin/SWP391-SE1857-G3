@@ -1,9 +1,181 @@
-.footer{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  background-color: black;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.footer {
+  background-color: #004080;
+  color: white;
   text-align: center;
-  color:white
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.login-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  height: 100vh;
+}
+
+.login-image-container {
+  background-image: url('/Koi-image/KoiLogin.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e2a38;
+}
+
+.form-box {
+  width: 80%;
+  max-width: 350px;
+  padding: 20px;
+  background-color: #273949;
+  border-radius: 12px;
+  color: white;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Đẩy tất cả sang trái */
+  margin-bottom: 10px;
+}
+
+.koi-logo {
+  width: 50px;  /* Đặt kích thước logo */
+  height: 50px;
+  margin-right: 10px;  /* Khoảng cách giữa logo và chữ */
+  border-radius: 50%;  /* Làm logo hình tròn */
+  object-fit: cover;   /* Đảm bảo logo giữ tỉ lệ */
+}
+
+.text-container h2, 
+.text-container p {
+  margin: 0;
+  text-align: left; /* Căn chữ sang trái */
+}
+
+.text-container p {
+  margin-top: 5px;
+  color: #adb5bd;
+}
+
+.form-box label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  font-size: 16px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.options .checkbox {
+  display: flex;
+  align-items: center;
+}
+  
+
+.options div {
+  display: flex;
+  align-items: center;
+}
+
+.options input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.options label {
+  font-size: 14px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.remember-me input[type="checkbox"] {
+  margin-right: 5px; /* Adds space between the checkbox and label */
+}
+  .options a {
+    font-size: 14px;
+    color: #00aaff;
+    margin-left: auto; 
+    text-align: right; 
+  }
+
+.form-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.form-box button:hover {
+  background-color: #0069d9;
+}
+
+.google-login {
+  background-color: white;
+  color: #444;
+  border: 1px solid #ddd;
+}
+
+.sign-up {
+  text-align: center;
+  color: #adb5bd;
+}
+
+.sign-up a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    grid-template-columns: 1fr; 
+  }
+
+  .login-image-container {
+    display: none; 
+  }
 }
