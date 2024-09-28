@@ -79,8 +79,9 @@ const LoginComponent = ({ handleLogin }) => {
             <button type="button" className="google-login"> Sign in with Google</button>
           </form>
           <div className="sign-up">
-            Don't have an account? <a href="#">Sign up now</a>
+            Don't have an account? <a href="/register">Sign up now</a>
           </div>
+
         </div>
       </div>
     </div>
