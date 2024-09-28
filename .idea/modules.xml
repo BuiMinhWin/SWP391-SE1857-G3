@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/ems-backend.iml" filepath="$PROJECT_DIR$/.idea/ems-backend.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/SWP391-SE1857-G3.iml" filepath="$PROJECT_DIR$/.idea/SWP391-SE1857-G3.iml" />
+>>>>>>> origin/phong
     </modules>
   </component>
 </project>
