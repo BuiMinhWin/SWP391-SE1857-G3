@@ -14,26 +14,15 @@ const RegisterComponent = () => {
       alert('Passwords do not match!');
       return;
     }
-   
+
     console.log('Registering:', { username, password });
-   
     navigate('/login');
   };
 
   return (
     <div className="register-container">
-      
-      <div className="background-giphy">
-        <iframe 
-          src="https://giphy.com/embed/F2NiLnKoooDXa2RZq1" 
-          width="100%" 
-          height="100%" 
-          style={{position: 'absolute', top: 0, left: 0, zIndex: -1, pointerEvents: 'none'}} 
-          frameBorder="0" 
-          allowFullScreen
-        ></iframe>
-      </div>
-      
+      <div className="background-giphy"></div>
+
       <div className="register-form-container">
         <div className="form-box">
           <h2>Register</h2>
@@ -69,6 +58,7 @@ const RegisterComponent = () => {
               />
             </div>
             <button type="submit">Sign Up</button>
+            <button type="button" className="google-login"> Sign Up with Google</button>
           </form>
         </div>
       </div>

@@ -4,125 +4,34 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden; 
   font-family: Arial, sans-serif;
 }
-
 
 #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
-.register-container {
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 100vh; 
-  position: relative;
-  overflow: hidden; 
-}
-
-
-.register-form-container {
-  width: 100%; 
-  max-width: 600px;
-  display: flex; 
-  justify-content: center; 
-  padding: 20px; 
-  z-index: 1; 
-}
-
-.background-giphy {
-  position: absolute; 
-  top: 0;
-  left: 0;
-  width: 100%; 
-  height: 100%; 
-  z-index: -1; 
-  overflow: hidden;
-}
-
-
-.background-giphy iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  pointer-events: none; 
-}
-
-.form-box {
-  background-color: rgba(0, 0, 0, 0.7); 
-  padding: 30px; 
-  border-radius: 8px; 
-  width: 100%;
-  max-width: 400px; 
-  margin: auto; 
-  color: white;
-}
-
-.form-box h2 {
-  text-align: center;
-  margin-bottom: 20px; 
-  font-size: 24px; 
-}
-
-.form-box input {
-  width: 100%; 
-  padding: 15px; 
-  margin: 10px 0;
-  border: none; 
-  border-radius: 5px; 
-  font-size: 16px; 
-}
-
-/* Button styling */
-.form-box button {
-  width: 100%; 
-  padding: 15px;
-  background-color: #1a73e8; 
-  color: #fff; 
-  border: none; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  font-size: 18px; 
-}
-
-/* Button hover state */
-.form-box button:hover {
-  background-color: #0c5bd3; 
-}
-
-
-.footer {
-  background-color: #004080; 
-  color: white; 
-  text-align: center; 
-  padding: 10px; 
-  width: 100%; 
-  font-size: 14px; 
-  flex-shrink: 0; 
-  position: relative;
+.container-fluid {
+  font-family: Arial, sans-serif;
 }
 
 
 .login-container {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 100vh; 
+  justify-content: center;
+  align-items: stretch;  
+  height: 100vh;
   background-color: #1e2a38;
 }
 
 
 .login-image-container {
-  background-image: url('/Koi-image/KoiLogin.png');
-  background-size: cover; 
-  background-position: center; 
+  background-image: url('/Koi-image/KoiLogin.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 66.66%; 
+  height: 100vh;
 }
 
 
@@ -130,16 +39,20 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent; 
+  background-color: transparent;
   position: relative;
   z-index: 1;
+  width: 33.33%; 
+  height: 100vh; 
+  padding: 20px; 
 }
 
 
 .form-box {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   padding: 20px;
-  background-color: #273949; 
+  background-color: #273949;
   border-radius: 12px;
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -154,10 +67,10 @@ html, body {
 }
 
 .koi-logo {
-  width: 50px; 
+  width: 50px;
   height: 50px;
-  margin-right: 10px; 
-  border-radius: 50%; 
+  margin-right: 10px;
+  border-radius: 50%;
   object-fit: cover;
 }
 
@@ -169,13 +82,14 @@ html, body {
 
 .text-container p {
   margin-top: 5px;
-  color: #adb5bd; 
+  color: #adb5bd;
 }
+
 
 .form-box label {
   font-size: 14px;
   margin-bottom: 5px;
-  display: block; 
+  display: block;
 }
 
 .form-box input {
@@ -187,6 +101,7 @@ html, body {
   background-color: #f0f0f0;
   font-size: 16px;
 }
+
 
 .options {
   display: flex;
@@ -220,15 +135,16 @@ html, body {
 }
 
 .remember-me input[type="checkbox"] {
-  margin-right: 5px; 
+  margin-right: 5px;
 }
 
 .options a {
   font-size: 14px;
   color: #00aaff;
-  margin-left: auto; 
+  margin-left: auto;
   text-align: right;
 }
+
 
 .sign-up {
   text-align: center;
@@ -240,17 +156,296 @@ html, body {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .register-form-container {
-    width: 100%; 
-    padding: 15px; 
-  }
-  
-  .login-container {
-    grid-template-columns: 1fr; 
-  }
 
-  .login-image-container {
-    display: none; 
-  }
+.form-box button {
+  width: 100%;
+  padding: 15px;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
 }
+
+.form-box button:hover {
+  background-color: #0c5bd3;
+}
+
+
+.google-login {
+  margin-top: 10px;
+  background-color: #db4437;
+}
+
+.google-login:hover {
+  background-color: #c13729;
+}
+
+
+.footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-giphy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://media.giphy.com/media/vu0OvzeHRdvHsxiiML/giphy.gif');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.register-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  background-color: #273949;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+ 
+}
+.sidebar.logo{
+  width:1%;
+}
+.KoiDeli{
+  margin-left: -130px;
+}
+
+
+.sidebar .profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar .profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar nav ul li a i {
+  margin-right: 10px;
+}
+
+.sidebar nav ul li a:hover {
+  color: #ffc107;
+}
+
+
+.dashboard {
+  width: 75%; 
+  padding: 20px;
+  background-color: #ffffff;
+  overflow-y: auto; 
+}
+
+.dashboard header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.language-select select {
+  padding: 5px;
+  font-size: 14px;
+}
+
+
+.dashboard {
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+}
+
+.dashboard header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.dashboard header input.form-control {
+  margin-right: 10px;
+}
+
+.overview {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.overview .card {
+  padding: 20px;
+  width: 23%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.overview .card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.overview .card p {
+  font-size: 16px;
+}
+
+.card.total-shipments {
+  background-color: #EEE8AA;
+}
+
+.card.total-orders{
+  background-color: #A1A7FF;
+}
+
+.card.ongoing-shipments {
+  background-color: #C4D0BA;
+}
+
+.card.delivered {
+  background-color: #A1A7FF;
+}
+
+.ongoing-delivery {
+  display: flex;
+  gap: 20px;
+}
+
+.ongoing-delivery h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.delivery-list {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.delivery-item {
+  padding: 10px;
+}
+
+.delivery-item:last-child {
+  border-bottom: none;
+}
+
+.delivery-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.delivery-map {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.delivery-map img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.delivery-map p {
+  margin: 10px 0;
+}
+
+.statistics {
+  display: flex;
+  gap: 20px;
+}
+
+.chart {
+  flex: 2;
+}
+
+.chart h3 {
+  margin-bottom: 20px;
+}
+
+.profits {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profits h3 {
+  margin-bottom: 10px;
+}
+
+.profits p {
+  margin-bottom: 5px;
+}
+
+
