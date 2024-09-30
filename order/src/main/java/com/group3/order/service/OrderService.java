@@ -15,12 +15,16 @@ public class OrderService {
     public Order createOrder(OrderCreation request){
         Order order = new Order();
 
+        order.setAccountId(request.getAccountId());
         order.setOrderDate(request.getOrderDate());
         order.setShippedDate(request.getShippedDate());
         order.setOrigin(request.getOrigin());
         order.setDestination(request.getDestination());
         order.setFreight(request.getFreight());
         order.setTotalPrice(request.getTotalPrice());
+        order.setServiceId(request.getServiceId());
+        order.setDocumentId(request.getDocumentId());
+        order.setStatus(request.getStatus());
 
         return orderRepository.save(order);
     }

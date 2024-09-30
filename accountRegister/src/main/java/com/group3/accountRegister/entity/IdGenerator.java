@@ -14,8 +14,10 @@ public class IdGenerator {
         int number1 = random.nextInt(10);
         int number2 = random.nextInt(10);
         int number3 = random.nextInt(10);
+        int number4 = random.nextInt(10);
+        int number5 = random.nextInt(10);
 
-        return "" + letter1 + letter2 + letter3 + number1 + number2 + number3;
+        return "" + letter1 + letter2 + letter3 + number1 + number2 + number3 + number4 + number5;
     }
 }
 
