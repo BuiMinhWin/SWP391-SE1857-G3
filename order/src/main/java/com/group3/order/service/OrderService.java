@@ -23,10 +23,14 @@ public class OrderService {
         order.setFreight(request.getFreight());
         order.setTotalPrice(request.getTotalPrice());
         order.setServiceId(request.getServiceId());
+        order.setShippedDate(request.getShippedDate());
         order.setDocumentId(request.getDocumentId());
         order.setStatus(request.getStatus());
 
         return orderRepository.save(order);
+    }
+    public Order updateOrder(){
+
     }
 
 }
