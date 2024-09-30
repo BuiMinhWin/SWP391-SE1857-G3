@@ -52,9 +52,6 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public void deactivateUser(String userId) {
-        userRepository.deleteById(userId);
-    }
 
 
     public LoginMessage loginUser(LoginDTO loginDTO) {
